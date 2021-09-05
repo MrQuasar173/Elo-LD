@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="eloDebateRankings" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="ulwGNjZb" />
+  </component>
+  <component name="ProjectId" id="1wq1JsjhPV4uCHzYjP56ZmcXgXO" />
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.TournamentQualityEntryList">
+    <configuration name="AddCommasBack" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AddCommasBack" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CertainSchools" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="CertainSchoolSorting" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManualRoundTester" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ManualRoundTester" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PredictMatch" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="PredictMatch" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sort" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Sort" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TournamentQuality" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TournamentQuality" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TournamentQualityEntryList" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="TournamentQualityEntryList" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="addCommas" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="AddCommas" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="readingTabroom" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="readingTabroom" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CompoundRunConfigurationType">
+      <method v="2" />
+    </configuration>
+    <configuration name="Unnamed" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.readingTabroom" />
+      <item itemvalue="Application.Sort" />
+      <item itemvalue="Application.AddCommasBack" />
+      <item itemvalue="Application.CertainSchools" />
+      <item itemvalue="Application.ManualRoundTester" />
+      <item itemvalue="Application.TournamentQuality" />
+      <item itemvalue="Application.TournamentQualityEntryList" />
+      <item itemvalue="Application.PredictMatch" />
+      <item itemvalue="Application.addCommas" />
+      <item itemvalue="Compound.Unnamed" />
+      <item itemvalue="Gradle.Unnamed" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="" />
+      <created>1629171235698</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1629171235698</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AddCommas.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AddCommas.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TournamentQualityEntryList.java</url>
+          <line>90</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/readingTabroom.java</url>
+          <line>238</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/readingTabroom.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
