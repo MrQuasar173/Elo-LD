@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="" />
+    <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamsBiggestLossElo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamsBiggestLossTeam.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamsBiggestWinElo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamsBiggestWinTeam.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TeamsWins.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (173).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (174).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (175).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (176).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (177).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (178).csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsAffElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsAffElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsGamesPlayed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsGamesPlayed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsNegElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsNegElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teams.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamsByes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsByes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamsElimRound.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsElimRound.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddCommas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCommas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readingTabroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/readingTabroom.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,11 +47,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="ulwGNjZb" />
   </component>
   <component name="ProjectId" id="1wq1JsjhPV4uCHzYjP56ZmcXgXO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -153,6 +187,19 @@
       <updated>1629171235698</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

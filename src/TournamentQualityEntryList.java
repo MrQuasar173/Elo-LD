@@ -132,7 +132,7 @@ public class TournamentQualityEntryList {
             }
             System.out.println("Average Elo: " + sum / teamList2.size());
             System.out.println("Average Returner Elo: " + sum2 / teamListReturn.size());
-            list.sortElimRounds();
+            list.sortElo();
         } catch (Exception e) {
             e.printStackTrace();
         }

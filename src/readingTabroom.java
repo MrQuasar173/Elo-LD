@@ -4,8 +4,8 @@ import java.util.*;
 public class readingTabroom {
     public static void main(String[] args) {
 
-        for (int k = 150; k <= 170; k++) {
-            if (k == 161 || k==164 ) {
+        for (int k = 150; k <= 178; k++) {
+            if (k == 161 || k==164 || k==171 || k==172) {
                 continue;
             }
             try {
