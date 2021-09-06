@@ -88,7 +88,7 @@ public class TournamentQualityEntryList {
                 }
                 lineNumber++;
             }
-            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (171).csv"));
+            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (164).csv"));
             sc.useDelimiter(",");
             int count = 0;
             int team = 0;
@@ -111,8 +111,8 @@ public class TournamentQualityEntryList {
                         teamList2.add(new debateTeam(info));
                         System.out.println(info);
                     } else {
-                        teamList2.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(lineNumber)));
-                        teamListReturn.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(lineNumber)));
+                        teamList2.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(team)));
+                        teamListReturn.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(team)));
 
                     }
                 }

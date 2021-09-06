@@ -2,27 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/WinPercentageComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WinsComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (179).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (180).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (181).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (182).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (183).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (184).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (185).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (186).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (187).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (188).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytable (189).csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsAffElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsAffElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsGamesPlayed.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsGamesPlayed.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamStatsNegElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsNegElo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Teams.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Teams.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamsByes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsByes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeamsElimRound.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsElimRound.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamsWins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsWins.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/CertainSchoolSorting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/CertainSchoolSorting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/ManualAddRound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/ManualAddRound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/PredictMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/PredictMatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/ManualRoundTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/ManualRoundTester.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/allTeams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/allTeams.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/debateTeam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/debateTeam.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CertainSchoolSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CertainSchoolSorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ManualAddRound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManualAddRound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PredictMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PredictMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddCommas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCommas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ManualRoundTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ManualRoundTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TournamentQuality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQuality.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/allTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/allTeams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/debateTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/debateTeam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readingTabroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/readingTabroom.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,6 +38,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="201" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="eloDebateRankings" />
@@ -71,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Sort">
+  <component name="RunManager" selected="Application.CertainSchools">
     <configuration name="AddCommasBack" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddCommasBack" />
       <module name="eloDebateRankings" />
@@ -209,11 +220,6 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/TournamentQualityEntryList.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/readingTabroom.java</url>
           <line>253</line>
           <option name="timeStamp" value="29" />
@@ -223,7 +229,15 @@
           <line>119</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/TournamentQualityEntryList.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/eloDebateRankings$TournamentQualityEntryList.ic" NAME="TournamentQualityEntryList Coverage Results" MODIFIED="1630964522184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

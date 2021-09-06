@@ -5,8 +5,8 @@ public class CertainSchoolSorting {
     public static void main(String[] args) {
         try {
             ArrayList<String> schools = new ArrayList<String>();
-            schools.add("Juan Diego Catholic");
-            schools.add("Eastlake");
+            schools.add("Rowland Hall");
+            schools.add("Peninsula");
 
 
             ArrayList<debateTeam> teamList = new ArrayList<debateTeam>();

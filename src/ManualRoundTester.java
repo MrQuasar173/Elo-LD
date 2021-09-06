@@ -21,6 +21,36 @@ public class ManualRoundTester {
         ManualAddRound.manualAdd(83,65,0);
         ManualAddRound.manualAdd(218,73,.3333333333);
         ManualAddRound.manualAdd(27,227,1);
-
+        ManualAddRound.manualAdd(17,18,0);
+        ManualAddRound.manualAdd(51,11,.666666666);
+        ManualAddRound.manualAdd(47,8,0);
+        ManualAddRound.manualAdd(106,33,.666666666);
+        ManualAddRound.manualAdd(63,154,.6666666666);
+        ManualAddRound.manualAdd(45,16,.33333333);
+        ManualAddRound.manualAdd(81,0,0);
+        ManualAddRound.manualAdd(125,148,.666666666);
+        ManualAddRound.manualAdd(29,35,.3333333333);
+        ManualAddRound.manualAdd(59,25,.6666666666);
+        ManualAddRound.manualAdd(3,59,.666666666);
+        ManualAddRound.manualAdd(35,109,.3333333333);
+        ManualAddRound.manualAdd(125,71,0);
+        ManualAddRound.manualAdd(65,0,0);
+        ManualAddRound.manualAdd(73,16,1);
+        ManualAddRound.manualAdd(63,27,0);
+        ManualAddRound.manualAdd(18,106,.666666666);
+        ManualAddRound.manualAdd(51,8,.3333333333);
+        ManualAddRound.manualAdd(3,8,0);
+        ManualAddRound.manualAdd(18,109,.666666666);
+        ManualAddRound.manualAdd(27,71,.3333333333);
+        ManualAddRound.manualAdd(0,73,.3333333333);
+        ManualAddRound.manualAdd(73,8,.3333333333);
+        ManualAddRound.manualAdd(71,18,.33333333333);
+        ManualAddRound.manualAdd(8,18,.3333333333);
+        ManualAddRound.manualAdd(196,218,0);
+        ManualAddRound.manualAdd(248,221,1);
+        ManualAddRound.manualAdd(264,180,0);
+        ManualAddRound.manualAdd(227,275,1);
+        ManualAddRound.manualAdd(267,315,.333333333);
+        ManualAddRound.manualAdd(292,126,.666666666);
     }
 }
