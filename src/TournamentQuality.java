@@ -25,6 +25,8 @@ public class TournamentQuality {
             BufferedReader bufreader8 = new BufferedReader(freader8);
             FileReader freader9 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
             BufferedReader bufreader9 = new BufferedReader(freader9);
+            FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+            BufferedReader bufreader10 = new BufferedReader(freader10);
 
 
             ArrayList<Double> teamStatsElo = new ArrayList<Double>();
@@ -33,6 +35,7 @@ public class TournamentQuality {
             ArrayList<Integer> teamStatsGamesPlayed = new ArrayList<Integer>();
             ArrayList<Integer> teamStatsByes = new ArrayList<Integer>();
             ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
+            ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
             String nextLine;
 
             while ((nextLine = bufreader3.readLine()) != null) {
@@ -71,11 +74,17 @@ public class TournamentQuality {
                 }
 
             }
+            while ((nextLine = bufreader10.readLine()) != null) {
+                if (!nextLine.isEmpty()) {
+                    teamStatsWins.add(Integer.parseInt(nextLine));
+                }
+
+            }
             String line;
             int lineNumber = 0;
             while ((line = bufreader.readLine()) != null && lineNumber < teamStatsElo.size()) {
                 if (!line.isEmpty()) {
-                    teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber)));
+                    teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber), teamStatsWins.get(lineNumber)));
                 }
                 lineNumber++;
             }

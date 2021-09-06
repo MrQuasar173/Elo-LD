@@ -28,6 +28,8 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
     BufferedReader bufreader8 = new BufferedReader(freader8);
     FileReader freader9 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
     BufferedReader bufreader9 = new BufferedReader(freader9);
+    FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+    BufferedReader bufreader10 = new BufferedReader(freader10);
 
 
     ArrayList<Double> teamStatsElo = new ArrayList<Double>();
@@ -36,6 +38,7 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
     ArrayList<Integer> teamStatsGamesPlayed = new ArrayList<Integer>();
     ArrayList<Integer> teamStatsByes = new ArrayList<Integer>();
     ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
+    ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
     String nextLine;
 
     while ((nextLine = bufreader3.readLine()) != null) {
@@ -74,12 +77,18 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
         }
 
     }
+    while ((nextLine = bufreader10.readLine()) != null) {
+        if (!nextLine.isEmpty()) {
+            teamStatsWins.add(Integer.parseInt(nextLine));
+        }
+
+    }
 
     String line;
     int lineNumber = 0;
     while ((line = bufreader.readLine()) != null && lineNumber < teamStatsElo.size()) {
         if (!line.isEmpty()) {
-            teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber)));
+            teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber), teamStatsWins.get(lineNumber)));
         }
         lineNumber++;
     }
@@ -109,6 +118,8 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
     BufferedWriter bufwriter8 = new BufferedWriter(frwiter8);
     FileWriter frwiter9 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
     BufferedWriter bufwriter9 = new BufferedWriter(frwiter9);
+    FileWriter frwiter10 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+    BufferedWriter bufwriter10 = new BufferedWriter(frwiter10);
     for (debateTeam teams : teamList) {
         // System.out.println(teams.getName() + " " + teams.getLong());
         bufwriter3.append(teams.getElo() + "\n");
@@ -133,6 +144,10 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
         // System.out.println(teams.getName() + " " + teams.getLong());
         bufwriter9.append(teams.getElimRounds() + "\n");
     }
+    for (debateTeam teams : teamList) {
+        // System.out.println(teams.getName() + " " + teams.getLong());
+        bufwriter10.append(teams.getWins() + "\n");
+    }
     bufwriter.flush();
     bufwriter3.flush();
     bufwriter4.flush();
@@ -140,6 +155,7 @@ public static void manualAdd(int affTeam, int negTeam, double score) throws Exce
     bufwriter6.flush();
     bufwriter8.flush();
     bufwriter9.flush();
+    bufwriter10.flush();
 }
 }
 

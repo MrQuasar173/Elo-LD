@@ -25,6 +25,8 @@ public class TournamentQualityEntryList {
             BufferedReader bufreader8 = new BufferedReader(freader8);
             FileReader freader9 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
             BufferedReader bufreader9 = new BufferedReader(freader9);
+            FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+            BufferedReader bufreader10 = new BufferedReader(freader10);
 
 
             ArrayList<Double> teamStatsElo = new ArrayList<Double>();
@@ -33,6 +35,7 @@ public class TournamentQualityEntryList {
             ArrayList<Integer> teamStatsGamesPlayed = new ArrayList<Integer>();
             ArrayList<Integer> teamStatsByes = new ArrayList<Integer>();
             ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
+            ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
             String nextLine;
 
             while ((nextLine = bufreader3.readLine()) != null) {
@@ -71,15 +74,21 @@ public class TournamentQualityEntryList {
                 }
 
             }
+            while ((nextLine = bufreader10.readLine()) != null) {
+                if (!nextLine.isEmpty()) {
+                    teamStatsWins.add(Integer.parseInt(nextLine));
+                }
+
+            }
             String line;
             int lineNumber = 0;
             while ((line = bufreader.readLine()) != null && lineNumber < teamStatsElo.size()) {
                 if (!line.isEmpty()) {
-                    teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber)));
+                    teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber), teamStatsWins.get(lineNumber)));
                 }
                 lineNumber++;
             }
-            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (164).csv"));
+            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (171).csv"));
             sc.useDelimiter(",");
             int count = 0;
             int team = 0;
@@ -102,8 +111,8 @@ public class TournamentQualityEntryList {
                         teamList2.add(new debateTeam(info));
                         System.out.println(info);
                     } else {
-                        teamList2.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team)));
-                        teamListReturn.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team)));
+                        teamList2.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(lineNumber)));
+                        teamListReturn.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team), teamStatsWins.get(lineNumber)));
 
                     }
                 }

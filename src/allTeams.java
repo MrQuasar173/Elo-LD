@@ -8,6 +8,8 @@ public class allTeams {
     private ArrayList<debateTeam> teamsGamesPlayed = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> teamsByes = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> teamsElimRounds = new ArrayList<debateTeam>();
+    private ArrayList<debateTeam> teamsWins = new ArrayList<debateTeam>();
+    private ArrayList<debateTeam> teamsPercentage = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> warning = new ArrayList<debateTeam>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
@@ -29,6 +31,7 @@ public class allTeams {
             ArrayList<Integer> gamesPlayed = new ArrayList<Integer>();
             ArrayList<Integer> byes = new ArrayList<Integer>();
             ArrayList<Integer> elimRounds = new ArrayList<Integer>();
+            ArrayList<Integer> wins = new ArrayList<Integer>();
             ArrayList<String> names = new ArrayList<String>();
             FileReader freader2 = new FileReader("/Users/zacharyklein/eloDebateRankings/Teams.txt");
             BufferedReader bufreader2 = new BufferedReader(freader2);
@@ -44,6 +47,8 @@ public class allTeams {
             BufferedReader bufreader7 = new BufferedReader(freader7);
             FileReader freader8 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
             BufferedReader bufreader8 = new BufferedReader(freader8);
+            FileReader freader9 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+            BufferedReader bufreader9 = new BufferedReader(freader9);
             String line;
             while ((line = bufreader2.readLine()) != null) {
                 if (!line.isEmpty()) {
@@ -87,14 +92,22 @@ public class allTeams {
                 }
 
             }
+            while ((line = bufreader9.readLine()) != null) {
+                if (!line.isEmpty()) {
+                    wins.add(Integer.parseInt(line));
+                }
+
+            }
             for (int i = 0; i < elos.size(); i++) {
-                teamsEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                teamsNegEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                teamsAffEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                teamsGamesPlayed.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                teamsElimRounds.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                teamsByes.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
-                warning.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i)));
+                teamsEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsNegEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsAffEloSort.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsGamesPlayed.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsElimRounds.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i),wins.get(i)));
+                teamsByes.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsWins.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsPercentage.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                warning.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
 
             }
         } catch (Exception e) {
@@ -109,6 +122,7 @@ public class allTeams {
         teamsGamesPlayed.remove(x);
         teamsByes.remove(x);
         teamsElimRounds.remove(x);
+        teamsWins.remove(x);
         warning.remove(x);
     }
 
@@ -179,6 +193,28 @@ public class allTeams {
                 System.out.println(k + ". " + teamsElimRounds.get(i).toString());
             }else{
                 System.out.println(ANSI_PURPLE + k + ". " + teamsElimRounds.get(i).toString() + ANSI_RESET);
+            }
+        }
+    }
+    public void sortWins(){
+        Collections.sort(teamsWins, new WinsComparator());
+        for (int i = teamsWins.size() - 1; i >= 0; i--) {
+            int k = teamsWins.size() - i;
+            if(!teamsWins.get(i).warning()) {
+                System.out.println(k + ". " + teamsWins.get(i).toString());
+            }else{
+                System.out.println(ANSI_PURPLE + k + ". " + teamsWins.get(i).toString() + ANSI_RESET);
+            }
+        }
+    }
+    public void sortPercentage(){
+        Collections.sort(teamsPercentage, new WinPercentageComparator());
+        for (int i = teamsPercentage.size() - 1; i >= 0; i--) {
+            int k = teamsPercentage.size() - i;
+            if(!teamsPercentage.get(i).warning()) {
+                System.out.println(k + ". " + teamsPercentage.get(i).toString());
+            }else{
+                System.out.println(ANSI_PURPLE + k + ". " + teamsPercentage.get(i).toString() + ANSI_RESET);
             }
         }
     }

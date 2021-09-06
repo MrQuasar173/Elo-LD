@@ -30,6 +30,8 @@ public class readingTabroom {
                 BufferedReader bufreader8 = new BufferedReader(freader8);
                 FileReader freader9 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
                 BufferedReader bufreader9 = new BufferedReader(freader9);
+                FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+                BufferedReader bufreader10 = new BufferedReader(freader10);
                 Scanner sc2 = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/allMatches.txt"));
                 sc2.useDelimiter(",");   //sets the delimiter pattern
             /*
@@ -42,6 +44,7 @@ public class readingTabroom {
                 ArrayList<Integer> teamStatsGamesPlayed = new ArrayList<Integer>();
                 ArrayList<Integer> teamStatsByes = new ArrayList<Integer>();
                 ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
+                ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
                 String nextLine;
 
                 while ((nextLine = bufreader3.readLine()) != null) {
@@ -80,6 +83,12 @@ public class readingTabroom {
                     }
 
                 }
+                while ((nextLine = bufreader10.readLine()) != null) {
+                    if (!nextLine.isEmpty()) {
+                        teamStatsWins.add(Integer.parseInt(nextLine));
+                    }
+
+                }
 
                 int counter = 0;
                 String affSchool = "";
@@ -111,7 +120,7 @@ public class readingTabroom {
                 int lineNumber = 0;
                 while ((line = bufreader.readLine()) != null && lineNumber < teamStatsElo.size()) {
                     if (!line.isEmpty()) {
-                        teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber)));
+                        teamList.add(new debateTeam(line, teamStatsElo.get(lineNumber), teamStatsAffElo.get(lineNumber), teamStatsNegElo.get(lineNumber), teamStatsGamesPlayed.get(lineNumber), teamStatsByes.get(lineNumber), teamStatsElimRounds.get(lineNumber), teamStatsWins.get(lineNumber)));
                     }
                     lineNumber++;
                 }
@@ -208,6 +217,8 @@ bufwriter.flush();
                 BufferedWriter bufwriter8 = new BufferedWriter(frwiter8);
                 FileWriter frwiter9 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
                 BufferedWriter bufwriter9 = new BufferedWriter(frwiter9);
+                FileWriter frwiter10 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+                BufferedWriter bufwriter10 = new BufferedWriter(frwiter10);
                 for (debateTeam teams : teamList) {
                     // System.out.println(teams.getName() + " " + teams.getLong());
                     bufwriter3.append(teams.getElo() + "\n");
@@ -232,12 +243,17 @@ bufwriter.flush();
                     // System.out.println(teams.getName() + " " + teams.getLong());
                     bufwriter9.append(teams.getElimRounds() + "\n");
                 }
+                for (debateTeam teams : teamList) {
+                    // System.out.println(teams.getName() + " " + teams.getLong());
+                    bufwriter10.append(teams.getWins() + "\n");
+                }
                 bufwriter3.flush();
                 bufwriter4.flush();
                 bufwriter5.flush();
                 bufwriter6.flush();
                 bufwriter8.flush();
                 bufwriter9.flush();
+                bufwriter10.flush();
             } catch (Exception e) {
                 e.printStackTrace();
             }

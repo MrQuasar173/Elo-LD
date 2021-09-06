@@ -16,6 +16,7 @@ public class debateTeam {
     private ArrayList<String> alias;
     private int byes;
     private int elimRounds;
+    private int wins;
 
     public debateTeam() {
         byes = 0;
@@ -27,6 +28,7 @@ public class debateTeam {
         gamesPlayed = 0;
         rounds = new ArrayList<debateRound>();
         elimRounds = 0;
+        wins = 0;
     }
 
     public debateTeam(String school, String code, double elo, double affElo, double negElo, int gamesPlayed) {
@@ -39,6 +41,7 @@ public class debateTeam {
         rounds = new ArrayList<debateRound>();
         byes = 0;
         elimRounds = 0;
+        wins = 0;
     }
 
     public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed) {
@@ -53,6 +56,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             byes = 0;
             elimRounds = 0;
+            wins = 0;
         } else {
             this.school = name.substring(0, name.length() - 3);
             this.code = name.substring(name.length() - 2);
@@ -63,6 +67,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             byes = 0;
             elimRounds = 0;
+            wins = 0;
         }
     }
 
@@ -78,6 +83,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             this.byes = byes;
             elimRounds = 0;
+             wins = 0;
         } else {
             this.school = name.substring(0, name.length() - 3);
             this.code = name.substring(name.length() - 2);
@@ -88,6 +94,7 @@ public class debateTeam {
             this.byes = byes;
             rounds = new ArrayList<debateRound>();
             elimRounds = 0;
+            wins = 0;
         }
     }
     public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds) {
@@ -102,6 +109,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             this.byes = byes;
             this.elimRounds = elimRounds;
+            wins = 0;
         } else {
             this.school = name.substring(0, name.length() - 3);
             this.code = name.substring(name.length() - 2);
@@ -112,7 +120,33 @@ public class debateTeam {
             this.byes = byes;
             rounds = new ArrayList<debateRound>();
             this.elimRounds = elimRounds;
-
+            wins = 0;
+        }
+    }
+    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds, int wins) {
+        if (name.length() < 2) {
+            System.out.println("School not parsed " + name);
+            this.elo = 1500.0;
+            this.gamesPlayed = 0;
+            this.code = "fl";
+            this.school = "fail";
+            this.affElo = 1500.0;
+            this.negElo = 1500.0;
+            rounds = new ArrayList<debateRound>();
+            this.byes = byes;
+            this.elimRounds = elimRounds;
+            this.wins = wins;
+        } else {
+            this.school = name.substring(0, name.length() - 3);
+            this.code = name.substring(name.length() - 2);
+            this.elo = elo;
+            this.gamesPlayed = gamesPlayed;
+            this.affElo = affElo;
+            this.negElo = negElo;
+            this.byes = byes;
+            rounds = new ArrayList<debateRound>();
+            this.elimRounds = elimRounds;
+            this.wins = wins;
         }
     }
 
@@ -128,6 +162,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             System.out.println("school not parsed " + name);
             byes = 0;
+            wins = 0;
         } else {
             elo = 1500.0;
             affElo = 1500.0;
@@ -137,6 +172,7 @@ public class debateTeam {
             school = name.substring(0, name.length() - 3);
             rounds = new ArrayList<debateRound>();
             byes = 0;
+            wins = 0;
         }
     }
     public int getElimRounds(){
@@ -160,6 +196,10 @@ public class debateTeam {
 
     public int getByes() {
         return byes;
+    }
+
+    public int getWins(){
+        return wins;
     }
 
     public String getCode() {
@@ -282,6 +322,10 @@ public class debateTeam {
         byes++;
     }
 
+    public void increaseWins(){
+        wins++;
+    }
+
     public void calculateElo(debateTeam opponent, boolean amAff, boolean affWins) {
         if (opponent.equals(new debateTeam("Zach BA"))) {
             increaseByes();
@@ -300,6 +344,11 @@ public class debateTeam {
             opponent.negEloCalculator(staySelf2, !affWins);
             increaseGamesPlayed();
             opponent.increaseGamesPlayed();
+            if(affWins){
+                increaseWins();
+            } else{
+                opponent.increaseWins();
+            }
 
 
         } else {
@@ -313,6 +362,11 @@ public class debateTeam {
             opponent.affEloCalculator(staySelf2, affWins);
             increaseGamesPlayed();
             opponent.increaseGamesPlayed();
+            if(!affWins){
+                increaseWins();
+            } else{
+                opponent.increaseWins();
+            }
 
         }
     }
@@ -341,7 +395,7 @@ public class debateTeam {
     }
 
     public String toString() {
-        return getName() + "\n \t elo: " + elo + "\n \t Neg Elo: " + negElo + "\n \t Aff Elo: " + affElo + "\n \t Games Played: " + gamesPlayed + "\n \t Byes: " + byes + "\n \t Elim Rounds: " + elimRounds;
+        return getName() + "\n \t elo: " + elo + "\n \t Neg Elo: " + negElo + "\n \t Aff Elo: " + affElo + "\n \t Games Played: " + gamesPlayed + "\n \t Byes: " + byes + "\n \t Elim Rounds: " + elimRounds + "\n \t Record: " + wins + "-" + (gamesPlayed - wins);
     }
 
     public boolean warning() {
@@ -378,6 +432,11 @@ public class debateTeam {
             increaseByes();
             opponent.increaseByes();
         } else {
+            if(score > .5){
+                increaseWins();
+            } else if (score < .5){
+                opponent.increaseWins();
+            }
             debateTeam staySelf1 = copyHelp();
             debateTeam staySelf2 = copyHelp();
             debateTeam stayOpponent1 = opponent.copyHelp();
@@ -391,5 +450,8 @@ public class debateTeam {
             increaseElimRounds();
             opponent.increaseElimRounds();
         }
+    }
+    public double getPercentage(){
+        return ((double) wins / gamesPlayed);
     }
 }
