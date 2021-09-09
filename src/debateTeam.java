@@ -17,6 +17,10 @@ public class debateTeam {
     private int byes;
     private int elimRounds;
     private int wins;
+    public static int affWinsTotal = 0;
+    public static int negWinsTotal = 0;
+    public static int affElimWins = 0;
+    public static int negElimWins = 0;
 
     public debateTeam() {
         byes = 0;
@@ -346,8 +350,10 @@ public class debateTeam {
             opponent.increaseGamesPlayed();
             if(affWins){
                 increaseWins();
+                affWinsTotal++;
             } else{
                 opponent.increaseWins();
+                negWinsTotal++;
             }
 
 
@@ -364,8 +370,10 @@ public class debateTeam {
             opponent.increaseGamesPlayed();
             if(!affWins){
                 increaseWins();
+                negWinsTotal++;
             } else{
                 opponent.increaseWins();
+                affWinsTotal++;
             }
 
         }
@@ -434,8 +442,12 @@ public class debateTeam {
         } else {
             if(score > .5){
                 increaseWins();
+                affWinsTotal++;
+                affElimWins++;
             } else if (score < .5){
                 opponent.increaseWins();
+                negWinsTotal++;
+                negElimWins++;
             }
             debateTeam staySelf1 = copyHelp();
             debateTeam staySelf2 = copyHelp();

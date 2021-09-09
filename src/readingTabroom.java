@@ -2,13 +2,13 @@ import java.io.*;
 import java.util.*;
 
 public class readingTabroom {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-            for (int k = 150; k <= 189; k++) {
-                if (k == 161 || k == 164 || k == 171 || k == 172) {
+            for (int k = 200; k <= 205; k++) {
+                if (k == 161) {
                     continue;
                 }
-                try {
+
                     Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (" + k + ").csv"));
                     String tournament = "Alta";
                     ArrayList<debateRound> matches = new ArrayList<debateRound>();
@@ -255,12 +255,35 @@ public class readingTabroom {
                     bufwriter9.flush();
                     bufwriter10.flush();
 
-                } catch (Exception e) {
-                    e.printStackTrace();
                 }
+        ManualAddRound.manualAdd(41,40,0);
+        ManualAddRound.manualAdd(22,16,.6666666);
+        ManualAddRound.manualAdd(22,11,.3333333);
+        ManualAddRound.manualAdd(29,40,1);
+        ManualAddRound.manualAdd(24,34,.3333333);
+        ManualAddRound.manualAdd(46,5,1);
+        ManualAddRound.manualAdd(44,38,.33333333);
+        ManualAddRound.manualAdd(32,21,.66666666);
+        ManualAddRound.manualAdd(23,18,0);
+        ManualAddRound.manualAdd(26,9,0);
+        ManualAddRound.manualAdd(9,11,.33333333);
+        ManualAddRound.manualAdd(18,29,.3333333);
+        ManualAddRound.manualAdd(34,32,.6666666);
+        ManualAddRound.manualAdd(38,46,.6666666);
+        ManualAddRound.manualAdd(11,38,1);
+        ManualAddRound.manualAdd(29,34,.3333333);
+        ManualAddRound.manualAdd(34,11,.6666666);
+        FileWriter frwiter11 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TotalAffNegWins.txt");
+        BufferedWriter bufwriter11 = new BufferedWriter(frwiter11);
+        bufwriter11.append(debateTeam.affWinsTotal  + "\n");
+        bufwriter11.append(debateTeam.negWinsTotal  + "\n");
+        bufwriter11.append(debateTeam.affElimWins  + "\n");
+        bufwriter11.append(debateTeam.negElimWins  + "\n");
+        bufwriter11.flush();
             }
+
         }
-    }
+
 
 
 

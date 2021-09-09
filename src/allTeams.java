@@ -11,6 +11,7 @@ public class allTeams {
     private ArrayList<debateTeam> teamsWins = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> teamsPercentage = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> warning = new ArrayList<debateTeam>();
+    private ArrayList<debateTeam> teamsForSum = new ArrayList<debateTeam>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -108,6 +109,7 @@ public class allTeams {
                 teamsWins.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 teamsPercentage.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 warning.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsForSum.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
 
             }
         } catch (Exception e) {
@@ -225,6 +227,14 @@ public class allTeams {
                 System.out.println(team);
             }
         }
+    }
+    public void sumGamesPlayed(){
+        int sum = 0;
+        for(debateTeam team : teamsForSum){
+            sum+= team.getGamesPlayed();
+
+        }
+        System.out.println(sum);
     }
 
     public void probabilityOfWinning() {
