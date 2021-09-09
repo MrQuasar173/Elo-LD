@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/DivideByAmount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamStatsAffElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsAffElo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamStatsElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsElo.txt" afterDir="false" />
@@ -11,9 +12,9 @@
       <change beforePath="$PROJECT_DIR$/TeamsElimRound.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsElimRound.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamsWins.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamsWins.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/debateTeam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/debateTeam.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TournamentQuality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQuality.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/debateTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/debateTeam.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +65,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PredictMatch">
+  <component name="RunManager" selected="Application.Sort">
     <configuration name="AddCommasBack" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddCommasBack" />
       <module name="eloDebateRankings" />
@@ -74,6 +75,13 @@
     </configuration>
     <configuration name="CertainSchools" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="CertainSchoolSorting" />
+      <module name="eloDebateRankings" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DivideByAmount" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DivideByAmount" />
       <module name="eloDebateRankings" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -151,6 +159,7 @@
     <list>
       <item itemvalue="Application.readingTabroom" />
       <item itemvalue="Application.Sort" />
+      <item itemvalue="Application.DivideByAmount" />
       <item itemvalue="Application.AddCommasBack" />
       <item itemvalue="Application.CertainSchools" />
       <item itemvalue="Application.ManualRoundTester" />

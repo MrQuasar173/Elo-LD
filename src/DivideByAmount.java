@@ -1,13 +1,8 @@
 import java.io.*;
 import java.util.*;
-
-public class TournamentQuality {
+public class DivideByAmount {
     public static void main(String[] args) {
         try {
-            ArrayList<debateTeam> teamList = new ArrayList<debateTeam>();
-            ArrayList<debateTeam> teamList2 = new ArrayList<debateTeam>();
-            ArrayList<debateTeam> teamListReturn = new ArrayList<debateTeam>();
-            ArrayList<Integer> keeper = new ArrayList<Integer>();
             FileReader freader = new FileReader("/Users/zacharyklein/eloDebateRankings/Teams.txt");
             BufferedReader bufreader = new BufferedReader(freader);
             FileReader freader2 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamStats.txt");
@@ -27,8 +22,7 @@ public class TournamentQuality {
             BufferedReader bufreader9 = new BufferedReader(freader9);
             FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
             BufferedReader bufreader10 = new BufferedReader(freader10);
-
-
+            ArrayList<debateTeam> teamList = new ArrayList<debateTeam>();
             ArrayList<Double> teamStatsElo = new ArrayList<Double>();
             ArrayList<Double> teamStatsAffElo = new ArrayList<Double>();
             ArrayList<Double> teamStatsNegElo = new ArrayList<Double>();
@@ -37,7 +31,6 @@ public class TournamentQuality {
             ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
             ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
             String nextLine;
-
             while ((nextLine = bufreader3.readLine()) != null) {
                 if (!nextLine.isEmpty()) {
                     teamStatsElo.add(Double.parseDouble(nextLine));
@@ -88,60 +81,59 @@ public class TournamentQuality {
                 }
                 lineNumber++;
             }
-            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (171).csv"));
-            sc.useDelimiter(",");
-            int count = 0;
-            int team = 0;
-            while (sc.hasNext()) {
-                count++;
-                String info = sc.next();
-                if (count <= 6) {
-
-                } else if (count % 6 == 1 || count % 6 == 2) {
-                    int x = 0;
-                    for (int i = 0; i < teamList.size(); i++) {
-                        if (teamList.get(i).equals(new debateTeam(info))) {
-                            team = i;
-                            keeper.add(team);
-                            x++;
-                        }
-                    }
-                    if (x == 0) {
-                        team = teamList.size();
-                        teamList2.add(new debateTeam(info));
-                        System.out.println(info);
-                    } else {
-                        teamList2.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team)));
-                        teamListReturn.add(new debateTeam(info, teamStatsElo.get(team), teamStatsAffElo.get(team), teamStatsNegElo.get(team), teamStatsGamesPlayed.get(team), teamStatsByes.get(team), teamStatsElimRounds.get(team)));
-
-                    }
-                }
-
+            for(int i = 0; i < teamList.size(); i++){
+                teamList.get(i).divide(2);
             }
-            allTeams list = new allTeams();
-            for (int i = teamList.size() - 1; i >= 0; i--) {
-                int end = 0;
-                for (int k = 0; k < keeper.size(); k++) {
-                    if (i == keeper.get(k)) {
-                        end = 1;
-                    }
-                }
-                if (end == 0) {
-                    list.remove(i);
-                }
+            FileWriter frwiter3 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamStatsElo.txt");
+            BufferedWriter bufwriter3 = new BufferedWriter(frwiter3);
+            FileWriter frwiter4 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamStatsAffElo.txt");
+            BufferedWriter bufwriter4 = new BufferedWriter(frwiter4);
+            FileWriter frwiter5 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamStatsNegElo.txt");
+            BufferedWriter bufwriter5 = new BufferedWriter(frwiter5);
+            FileWriter frwiter6 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamStatsGamesPlayed.txt");
+            BufferedWriter bufwriter6 = new BufferedWriter(frwiter6);
+            FileWriter frwiter8 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsByes.txt");
+            BufferedWriter bufwriter8 = new BufferedWriter(frwiter8);
+            FileWriter frwiter9 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsElimRound.txt");
+            BufferedWriter bufwriter9 = new BufferedWriter(frwiter9);
+            FileWriter frwiter10 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
+            BufferedWriter bufwriter10 = new BufferedWriter(frwiter10);
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter3.append(teams.getElo() + "\n");
             }
-            double sum = 0;
-            for (debateTeam teamer : teamList2) {
-                sum += teamer.getElo();
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter4.append(teams.getAffElo() + "\n");
             }
-            double sum2 = 0;
-            for (debateTeam teamer2 : teamListReturn) {
-                sum2 += teamer2.getElo();
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter5.append(teams.getNegElo() + "\n");
             }
-            System.out.println("Average Elo: " + sum / teamList2.size());
-            System.out.println("Average Returner Elo: " + sum2 / teamListReturn.size());
-            list.sortElo();
-        } catch (Exception e) {
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter6.append(teams.getGamesPlayed() + "\n");
+            }
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter8.append(teams.getByes() + "\n");
+            }
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter9.append(teams.getElimRounds() + "\n");
+            }
+            for (debateTeam teams : teamList) {
+                // System.out.println(teams.getName() + " " + teams.getLong());
+                bufwriter10.append(teams.getWins() + "\n");
+            }
+            bufwriter3.flush();
+            bufwriter4.flush();
+            bufwriter5.flush();
+            bufwriter6.flush();
+            bufwriter8.flush();
+            bufwriter9.flush();
+            bufwriter10.flush();
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }

@@ -454,4 +454,10 @@ public class debateTeam {
     public double getPercentage(){
         return ((double) wins / gamesPlayed);
     }
+    public void divide(int x){
+        gamesPlayed = gamesPlayed / x;
+        byes = byes / x;
+        wins = wins / x;
+        elimRounds = elimRounds / x;
+    }
 }
