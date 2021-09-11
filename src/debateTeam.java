@@ -21,6 +21,12 @@ public class debateTeam {
     public static int negWinsTotal = 0;
     public static int affElimWins = 0;
     public static int negElimWins = 0;
+    public static int affWinsThreeZero = 0;
+    public static int negWinsThreeZero = 0;
+    public static int affWinsTwoOne = 0;
+    public static int negWinsTwoOne = 0;
+    public static int correct =  0;
+    public static int totalGamesPlayed = 0;
 
     public debateTeam() {
         byes = 0;
@@ -351,9 +357,23 @@ public class debateTeam {
             if(affWins){
                 increaseWins();
                 affWinsTotal++;
+                if(getElo() > opponent.getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                } else{
+                    totalGamesPlayed++;
+                    System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits(opponent.getElo() - getElo())) + " difference");
+                }
             } else{
                 opponent.increaseWins();
                 negWinsTotal++;
+                if(opponent.getElo() > getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                } else{
+                    totalGamesPlayed++;
+                    System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
+                }
             }
 
 
@@ -371,9 +391,23 @@ public class debateTeam {
             if(!affWins){
                 increaseWins();
                 negWinsTotal++;
+                if(getElo() > opponent.getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                } else{
+                    totalGamesPlayed++;
+                    System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits((opponent.getElo() - getElo()))) + " difference");
+                }
             } else{
                 opponent.increaseWins();
                 affWinsTotal++;
+                if(opponent.getElo() > getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                }else{
+                    totalGamesPlayed++;
+                    System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
+                }
             }
 
         }
@@ -441,10 +475,34 @@ public class debateTeam {
             opponent.increaseByes();
         } else {
             if(score > .5){
+                if(score == 1){
+                    affWinsThreeZero++;
+                }else{
+                    affWinsTwoOne++;
+                }
+                if(getElo() > opponent.getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                }else{
+                    totalGamesPlayed++;
+                    System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits(opponent.getElo() - getElo())) + " difference");
+                }
                 increaseWins();
                 affWinsTotal++;
                 affElimWins++;
             } else if (score < .5){
+                if(score == 0){
+                    negWinsThreeZero++;
+                }else{
+                    negWinsTwoOne++;
+                }
+                if(opponent.getElo() > getElo()){
+                    correct++;
+                    totalGamesPlayed++;
+                }else{
+                    totalGamesPlayed++;
+                    System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
+                }
                 opponent.increaseWins();
                 negWinsTotal++;
                 negElimWins++;

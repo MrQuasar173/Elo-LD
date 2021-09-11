@@ -261,7 +261,7 @@ public class readingTabroom {
         ManualAddRound.manualAdd(22,11,.3333333);
         ManualAddRound.manualAdd(29,40,1);
         ManualAddRound.manualAdd(24,34,.3333333);
-        ManualAddRound.manualAdd(46,5,1);
+        ManualAddRound.manualAdd(46,5,.6666666);
         ManualAddRound.manualAdd(44,38,.33333333);
         ManualAddRound.manualAdd(32,21,.66666666);
         ManualAddRound.manualAdd(23,18,0);
@@ -279,6 +279,13 @@ public class readingTabroom {
         bufwriter11.append(debateTeam.negWinsTotal  + "\n");
         bufwriter11.append(debateTeam.affElimWins  + "\n");
         bufwriter11.append(debateTeam.negElimWins  + "\n");
+        bufwriter11.append(debateTeam.affWinsThreeZero  + "\n");
+        bufwriter11.append(debateTeam.negWinsThreeZero  + "\n");
+        bufwriter11.append(debateTeam.affWinsTwoOne  + "\n");
+        bufwriter11.append(debateTeam.negWinsTwoOne  + "\n");
+        bufwriter11.append(debateTeam.correct  + "\n");
+        bufwriter11.append(debateTeam.totalGamesPlayed  + "\n");
+
         bufwriter11.flush();
             }
 
