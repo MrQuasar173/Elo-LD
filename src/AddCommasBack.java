@@ -4,7 +4,7 @@ import java.util.*;
 public class AddCommasBack {
     public static void main(String[] args) {
         try {
-            FileReader freader = new FileReader("/Users/zacharyklein/eloDebateRankings/mytable (164).csv");
+            FileReader freader = new FileReader("/Users/zacharyklein/eloDebateRankings/EntryListUK.csv");
             BufferedReader bufreader = new BufferedReader(freader);
             ArrayList<String> lines = new ArrayList<String>();
             String line;
@@ -14,7 +14,7 @@ public class AddCommasBack {
                 }
 
             }
-            FileWriter frwiter = new FileWriter("/Users/zacharyklein/eloDebateRankings/mytable (164).csv");
+            FileWriter frwiter = new FileWriter("/Users/zacharyklein/eloDebateRankings/EntryListUK.csv");
             BufferedWriter bufwriter = new BufferedWriter(frwiter);
             for (int i = 1; i < lines.size(); i++) {
                 lines.set(i, lines.get(i) + ",");
