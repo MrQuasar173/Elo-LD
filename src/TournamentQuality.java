@@ -88,7 +88,7 @@ public class TournamentQuality {
                 }
                 lineNumber++;
             }
-            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (190).csv"));
+            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (217).csv"));
             sc.useDelimiter(",");
             int count = 0;
             int team = 0;

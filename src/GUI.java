@@ -14,7 +14,7 @@ public class GUI implements ActionListener {
         JButton elimRounds = new JButton("Elim Round Sort");
         JButton winPercentage = new JButton("Win Percentage Sort");
         JButton wins = new JButton("Wins Sort");
-        panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
+        panel.setBorder(BorderFactory.createEmptyBorder(90,90,20,50));
         panel.setLayout(new GridLayout(0, 1));
         panel.add(eloButton);
         panel.add(affEloButton);
@@ -38,6 +38,6 @@ public class GUI implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+JLabel explination = new JLabel("");
     }
 }

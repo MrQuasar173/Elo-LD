@@ -82,7 +82,7 @@ public class DivideByAmount {
                 lineNumber++;
             }
             for(int i = 0; i < teamList.size(); i++){
-                teamList.get(i).divide(14);
+                teamList.get(i).divide(10);
             }
             FileWriter frwiter3 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamStatsElo.txt");
             BufferedWriter bufwriter3 = new BufferedWriter(frwiter3);

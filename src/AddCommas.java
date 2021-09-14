@@ -4,7 +4,7 @@ import java.util.*;
 public class AddCommas {
     public static void main(String[] args) {
         try {
-            FileReader freader = new FileReader("/Users/zacharyklein/eloDebateRankings/mytable (205).csv");
+            FileReader freader = new FileReader("/Users/zacharyklein/eloDebateRankings/mytable (222).csv");
             BufferedReader bufreader = new BufferedReader(freader);
             ArrayList<String> lines = new ArrayList<String>();
             String line;
@@ -14,7 +14,7 @@ public class AddCommas {
                 }
 
             }
-            FileWriter frwiter = new FileWriter("/Users/zacharyklein/eloDebateRankings/mytable (205).csv");
+            FileWriter frwiter = new FileWriter("/Users/zacharyklein/eloDebateRankings/mytable (222).csv");
             BufferedWriter bufwriter = new BufferedWriter(frwiter);
             for (int i = 1; i < lines.size(); i++) {
                 lines.set(i, "," + lines.get(i));
