@@ -27,7 +27,7 @@ public class Sort {
         System.out.println("Aff Wins " + RoundingClass.roundTwoDigits(( (double) affWinsTotalAmount * 100) / (affWinsTotalAmount + negWinsTotalAmount)) + "% of the time");
         System.out.println("Aff wins in elim rounds " + RoundingClass.roundTwoDigits(( (double) affElimWin * 100) / (negElimWin + affElimWin)) + "% of the time");
         System.out.println("Elo predicted the correct winner " + RoundingClass.roundTwoDigits((double) 100 * correctVar / totalGamesPlayedVar) + "%");
-        listy.sortElimRounds();
+        listy.sortElo();
     }
 }
 

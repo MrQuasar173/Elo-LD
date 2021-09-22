@@ -4,7 +4,7 @@ import java.util.*;
 public class readingTabroom {
     public static void main(String[] args) throws Exception {
 
-            for (int k = 200; k <= 222; k++) {
+            for (int k = 200; k <= 234; k++) {
                 if (k == 161) {
                     continue;
                 }
@@ -256,6 +256,7 @@ public class readingTabroom {
                     bufwriter10.flush();
 
                 }
+
         ManualAddRound.manualAdd(41,40,0);
         ManualAddRound.manualAdd(22,16,.6666666);
         ManualAddRound.manualAdd(22,11,.3333333);
@@ -299,6 +300,8 @@ public class readingTabroom {
         ManualAddRound.manualAdd(53,86,.3333333333);
         ManualAddRound.manualAdd(85,95,0);
         ManualAddRound.manualAdd(86,52,0);
+
+
         FileWriter frwiter11 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TotalAffNegWins.txt");
         BufferedWriter bufwriter11 = new BufferedWriter(frwiter11);
         bufwriter11.append(debateTeam.affWinsTotal  + "\n");
