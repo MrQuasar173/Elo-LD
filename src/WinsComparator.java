@@ -11,7 +11,13 @@ public class WinsComparator implements Comparator<debateTeam> {
             } else if(o2.getGamesPlayed() > o1.getGamesPlayed()){
                 return 1;
             } else{
-                return 0;
+                if(o1.getElo() > o2.getElo()){
+                    return 1;
+                } else if(o1.getElo() == o2.getElo()){
+                    return 0;
+                } else{
+                    return -1;
+                }
             }
         } else {
             return -1;

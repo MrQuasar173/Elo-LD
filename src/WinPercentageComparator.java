@@ -6,7 +6,13 @@ public class WinPercentageComparator implements Comparator<debateTeam> {
         if (o1.getPercentage() > o2.getPercentage()) {
             return 1;
         } else if (o1.getPercentage() == o2.getPercentage()) {
-            return 0;
+            if(o1.getElo() > o2.getElo()){
+                return 1;
+            } else if(o1.getElo() == o2.getElo()){
+                return 0;
+            } else{
+                return -1;
+            }
         } else {
             return -1;
         }

@@ -12,6 +12,7 @@ public class allTeams {
     private ArrayList<debateTeam> teamsPercentage = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> warning = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> teamsForSum = new ArrayList<debateTeam>();
+    private ArrayList<debateTeam> probs = new ArrayList<debateTeam>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -110,6 +111,7 @@ public class allTeams {
                 teamsPercentage.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 warning.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 teamsForSum.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                probs.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
 
             }
         } catch (Exception e) {
@@ -126,6 +128,7 @@ public class allTeams {
         teamsElimRounds.remove(x);
         teamsWins.remove(x);
         warning.remove(x);
+        probs.remove(x);
     }
 
     public void sortElo() {
@@ -238,7 +241,28 @@ public class allTeams {
     }
 
     public void probabilityOfWinning() {
+        Collections.sort(probs, new BackwardEloComparator());
+        ArrayList<Double> chance = new ArrayList<Double>();
+        for(int x = 0; x < probs.size(); x++){
+            chance.add(1.0);
+        }
+        for(int i = 0; i < probs.size(); i++){
+            for(int k = 0; k < probs.size() && k < 6; k++){
 
+                    chance.set(i,chance.get(i) * probs.get(i).expected(probs.get(k)));
+
+            }
+        }
+        double sum = 0.0;
+        for(int y = 0; y < chance.size() && y < 6; y++){
+
+            sum+=chance.get(y);
+        }
+
+        for(int z = 0; z < probs.size(); z++){
+            int k = z + 1;
+            System.out.println( k + ". " + probs.get(z) + "\n \t Probability of winning: " + RoundingClass.roundTwoDigits(100 * (chance.get(z) / sum)) + "%");
+        }
     }
 
 

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350ba5e8-b89c-4a1e-9f6e-bd03e4e386a6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/EntryListJackHowe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BackwardEloComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamStatsAffElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsAffElo.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TeamStatsElo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TeamStatsElo.txt" afterDir="false" />
@@ -16,16 +16,22 @@
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommas.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommasBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/AddCommasBack.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/CertainSchoolSorting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/CertainSchoolSorting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/Sort.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/ElimRoundComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/ElimRoundComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/GamesPlayedComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/GamesPlayedComparator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQuality.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/TournamentQualityEntryList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/WinPercentageComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/WinPercentageComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/WinsComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/WinsComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/allTeams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/allTeams.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/eloDebateRankings/readingTabroom.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddCommas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCommas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AddCommasBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCommasBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CertainSchoolSorting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CertainSchoolSorting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ElimRoundComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ElimRoundComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamesPlayedComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GamesPlayedComparator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TournamentQuality.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQuality.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TournamentQualityEntryList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WinPercentageComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WinPercentageComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WinsComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WinsComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/allTeams.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/allTeams.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readingTabroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/readingTabroom.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Sort">
+  <component name="RunManager" selected="Application.TournamentQuality">
     <configuration name="AddCommasBack" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="AddCommasBack" />
       <module name="eloDebateRankings" />

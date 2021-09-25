@@ -6,7 +6,13 @@ public class GamesPlayedComparator implements Comparator<debateTeam> {
         if (o1.getGamesPlayed() > o2.getGamesPlayed()) {
             return 1;
         } else if (o1.getGamesPlayed() == o2.getGamesPlayed()) {
-            return 0;
+            if(o1.getElo() > o2.getElo()){
+                return 1;
+            } else if(o1.getElo() == o2.getElo()){
+                return 0;
+            } else{
+                return -1;
+            }
         } else {
             return -1;
         }
