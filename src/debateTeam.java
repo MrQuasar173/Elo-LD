@@ -1,3 +1,5 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.*;
 
 /*
@@ -5,28 +7,31 @@ Need to do.
 1. figure out how to add previous rounds from doc
  */
 public class debateTeam {
-    private String school;
-    private String code;
-    private double elo;
-    private double affElo;
-    private double negElo;
-    private int gamesPlayed;
-    public static final int scale = 100;
-    private ArrayList<debateRound> rounds;
-    private ArrayList<String> alias;
-    private int byes;
-    private int elimRounds;
-    private int wins;
-    public static int affWinsTotal = 0;
-    public static int negWinsTotal = 0;
-    public static int affElimWins = 0;
-    public static int negElimWins = 0;
-    public static int affWinsThreeZero = 0;
-    public static int negWinsThreeZero = 0;
-    public static int affWinsTwoOne = 0;
-    public static int negWinsTwoOne = 0;
-    public static int correct =  0;
-    public static int totalGamesPlayed = 0;
+
+
+
+        private String school;
+        private String code;
+        private double elo;
+        private double affElo;
+        private double negElo;
+        private int gamesPlayed;
+        public static final int scale = 100;
+        private ArrayList<debateRound> rounds;
+        private ArrayList<String> alias;
+        private int byes;
+        private int elimRounds;
+        private int wins;
+        public static int affWinsTotal = 0;
+        public static int negWinsTotal = 0;
+        public static int affElimWins = 0;
+        public static int negElimWins = 0;
+        public static int affWinsThreeZero = 0;
+        public static int negWinsThreeZero = 0;
+        public static int affWinsTwoOne = 0;
+        public static int negWinsTwoOne = 0;
+        public static int correct = 0;
+        public static int totalGamesPlayed = 0;
 
     public debateTeam() {
         byes = 0;
@@ -41,7 +46,7 @@ public class debateTeam {
         wins = 0;
     }
 
-    public debateTeam(String school, String code, double elo, double affElo, double negElo, int gamesPlayed) {
+    public debateTeam(String school, String code, double elo, double affElo, double negElo, int gamesPlayed){
         this.school = school;
         this.code = code;
         this.elo = elo;
@@ -54,7 +59,7 @@ public class debateTeam {
         wins = 0;
     }
 
-    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed) {
+    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed){
         if (name.length() < 2) {
             System.out.println("School not parsed " + name);
             this.elo = 1500.0;
@@ -81,7 +86,7 @@ public class debateTeam {
         }
     }
 
-    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes) {
+    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes){
         if (name.length() < 2) {
             System.out.println("School not parsed " + name);
             this.elo = 1500.0;
@@ -93,7 +98,7 @@ public class debateTeam {
             rounds = new ArrayList<debateRound>();
             this.byes = byes;
             elimRounds = 0;
-             wins = 0;
+            wins = 0;
         } else {
             this.school = name.substring(0, name.length() - 3);
             this.code = name.substring(name.length() - 2);
@@ -107,7 +112,7 @@ public class debateTeam {
             wins = 0;
         }
     }
-    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds) {
+    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds){
         if (name.length() < 2) {
             System.out.println("School not parsed " + name);
             this.elo = 1500.0;
@@ -133,7 +138,8 @@ public class debateTeam {
             wins = 0;
         }
     }
-    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds, int wins) {
+    public debateTeam(String name, double elo, double affElo, double negElo, int gamesPlayed, int byes, int elimRounds,
+        int wins){
         if (name.length() < 2) {
             System.out.println("School not parsed " + name);
             this.elo = 1500.0;
@@ -185,95 +191,95 @@ public class debateTeam {
             wins = 0;
         }
     }
-    public int getElimRounds(){
+        public int getElimRounds () {
         return elimRounds;
     }
-    public double getElo() {
+        public double getElo () {
         return elo;
     }
 
-    public double getAffElo() {
+        public double getAffElo () {
         return affElo;
     }
 
-    public double getNegElo() {
+        public double getNegElo () {
         return negElo;
     }
 
-    public String getSchool() {
+        public String getSchool () {
         return school;
     }
 
-    public int getByes() {
+        public int getByes () {
         return byes;
     }
 
-    public int getWins(){
+        public int getWins () {
         return wins;
     }
 
-    public String getCode() {
+        public String getCode () {
         return code;
     }
 
-    public String getName() {
+        public String getName () {
         return school + " " + code;
     }
 
-    public ArrayList<debateRound> getRounds() {
+        public ArrayList<debateRound> getRounds () {
         return rounds;
     }
 
-    public int getGamesPlayed() {
+        public int getGamesPlayed () {
         return gamesPlayed;
     }
 
-    public void setElo(double newElo) {
+        public void setElo ( double newElo){
         elo = newElo;
     }
 
-    public void setAffElo(double newAffElo) {
+        public void setAffElo ( double newAffElo){
         affElo = newAffElo;
     }
 
-    public void setNegElo(double newNegElo) {
+        public void setNegElo ( double newNegElo){
         negElo = newNegElo;
     }
 
-    public void increaseGamesPlayed() {
+        public void increaseGamesPlayed () {
         gamesPlayed++;
     }
 
-    public void increaseElimRounds(){
+        public void increaseElimRounds () {
         elimRounds++;
     }
 
-    public void delete() {
+        public void delete () {
         //run some code to get it out of the database
         System.out.println("Remember delete does nothing");
     }
 
-    public double expected(debateTeam opponent) {
+        public double expected (debateTeam opponent){
         //1 means that the non-opponent wins 100% of the time 0 means that opponent wins 100% of the time.
         // It is a scale from 0 to 1.
         return 1 / (1 + Math.pow(10, (opponent.getElo() - getElo()) / 400));
     }
 
-    public double affExpected(debateTeam opponent) {
+        public double affExpected (debateTeam opponent){
         //1 means that the non-opponent wins 100% of the time 0 means that opponent wins 100% of the time.
         // It is a scale from 0 to 1.
         //If the team this method is on is aff.
         return 1 / (1 + Math.pow(10, (opponent.getNegElo() - getAffElo()) / 400));
     }
 
-    public double negExpected(debateTeam opponent) {
+        public double negExpected (debateTeam opponent){
         //1 means that the non-opponent wins 100% of the time 0 means that opponent wins 100% of the time.
         // It is a scale from 0 to 1
         //If the team this method is on is neg.
         return 1 / (1 + Math.pow(10, (opponent.getAffElo() - getNegElo()) / 400));
     }
 
-    public void eloCalculator(debateTeam opponent, boolean weWon) {
+        public void eloCalculator (debateTeam opponent,boolean weWon){
         //weWon is if the team who this method is on, won.
         if (weWon) {
             elo = elo + scale * (1 - expected(opponent));
@@ -283,7 +289,7 @@ public class debateTeam {
         // increaseGamesPlayed();
     }
 
-    public void affEloCalculator(debateTeam opponent, boolean weWon) {
+        public void affEloCalculator (debateTeam opponent,boolean weWon){
         //if the team that the method this is on is aff.
         if (weWon) {
             affElo = affElo + scale * (1 - affExpected(opponent));
@@ -292,7 +298,7 @@ public class debateTeam {
         }
     }
 
-    public void negEloCalculator(debateTeam opponent, boolean weWon) {
+        public void negEloCalculator (debateTeam opponent,boolean weWon){
         //if the team that the method this is on is neg.
         if (weWon) {
             negElo = negElo + scale * (1 - negExpected(opponent));
@@ -301,42 +307,43 @@ public class debateTeam {
         }
     }
 
-    public debateTeam copy(debateTeam copyCat) {
+        public debateTeam copy (debateTeam copyCat){
         debateTeam clone = new debateTeam(copyCat.getSchool(), copyCat.getCode(), copyCat.getElo(), copyCat.getAffElo(), copyCat.getNegElo(), copyCat.getGamesPlayed());
         return clone;
     }
 
-    public debateTeam copyHelp() {
+        public debateTeam copyHelp () {
         debateTeam clone = new debateTeam(getSchool(), getCode(), getElo(), getAffElo(), getNegElo(), getGamesPlayed());
         return clone;
     }
 
-    public int toIntNegElo() {
+        public int toIntNegElo () {
         return (int) Math.round(negElo);
     }
 
-    public int toIntAffElo() {
+        public int toIntAffElo () {
         return (int) Math.round(affElo);
     }
 
-    public int toIntElo() {
+        public int toIntElo () {
         return (int) Math.round(elo);
     }
 
-    public Long getLong() {
+        public Long getLong () {
         //return elo + 10000 * affElo + 100000000 * negElo + 1000000000000L *  gamesPlayed;
         return 1000000000000L * gamesPlayed + 100000000L * toIntNegElo() + 10000L * toIntAffElo() + toIntElo();
     }
 
-    public void increaseByes() {
+        public void increaseByes () {
         byes++;
     }
 
-    public void increaseWins(){
+        public void increaseWins () {
         wins++;
     }
 
-    public void calculateElo(debateTeam opponent, boolean amAff, boolean affWins) {
+        public void calculateElo (debateTeam opponent,boolean amAff, boolean affWins){
+
         if (opponent.equals(new debateTeam("Zach BA"))) {
             increaseByes();
             opponent.increaseByes();
@@ -354,23 +361,23 @@ public class debateTeam {
             opponent.negEloCalculator(staySelf2, !affWins);
             increaseGamesPlayed();
             opponent.increaseGamesPlayed();
-            if(affWins){
+            if (affWins) {
                 increaseWins();
                 affWinsTotal++;
-                if(getElo() > opponent.getElo()){
+                if (getElo() > opponent.getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                } else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits(opponent.getElo() - getElo())) + " difference");
                 }
-            } else{
+            } else {
                 opponent.increaseWins();
                 negWinsTotal++;
-                if(opponent.getElo() > getElo()){
+                if (opponent.getElo() > getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                } else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
                 }
@@ -388,23 +395,23 @@ public class debateTeam {
             opponent.affEloCalculator(staySelf2, affWins);
             increaseGamesPlayed();
             opponent.increaseGamesPlayed();
-            if(!affWins){
+            if (!affWins) {
                 increaseWins();
                 negWinsTotal++;
-                if(getElo() > opponent.getElo()){
+                if (getElo() > opponent.getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                } else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits((opponent.getElo() - getElo()))) + " difference");
                 }
-            } else{
+            } else {
                 opponent.increaseWins();
                 affWinsTotal++;
-                if(opponent.getElo() > getElo()){
+                if (opponent.getElo() > getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                }else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
                 }
@@ -413,11 +420,11 @@ public class debateTeam {
         }
     }
 
-    public int compareTo(debateTeam otherTeam) {
+        public int compareTo (debateTeam otherTeam){
         return Double.compare(otherTeam.getElo(), getElo());
     }
 
-    public boolean equals(Object o) {
+        public boolean equals (Object o){
         debateTeam other = (debateTeam) o;
 
         if (getSchool().equals(other.getSchool())) {
@@ -428,7 +435,7 @@ public class debateTeam {
         return false;
     }
 
-    public void combine(debateTeam other) {
+        public void combine (debateTeam other){
         elo = (getElo() * getGamesPlayed() + other.getElo() * other.getGamesPlayed()) / (getGamesPlayed() + other.getGamesPlayed());
         negElo = (getNegElo() * getGamesPlayed() + other.getNegElo() * other.getGamesPlayed()) / (getGamesPlayed() + other.getGamesPlayed());
         affElo = (getAffElo() * getGamesPlayed() + other.getAffElo() * other.getGamesPlayed()) / (getGamesPlayed() + other.getGamesPlayed());
@@ -436,11 +443,11 @@ public class debateTeam {
 
     }
 
-    public String toString() {
+        public String toString () {
         return getName() + "\n \t elo: " + elo + "\n \t Neg Elo: " + negElo + "\n \t Aff Elo: " + affElo + "\n \t Games Played: " + gamesPlayed + "\n \t Byes: " + byes + "\n \t Elim Rounds: " + elimRounds + "\n \t Record: " + wins + "-" + (gamesPlayed - wins);
     }
 
-    public boolean warning() {
+        public boolean warning () {
         if (affElo > elo && negElo > elo) {
             return true;
         }
@@ -450,11 +457,11 @@ public class debateTeam {
         return false;
     }
 
-    public void eloCalculatorAny(debateTeam opponent, double valued) {
+        public void eloCalculatorAny (debateTeam opponent,double valued){
         elo = elo + scale * (valued - expected(opponent));
     }
 
-    public void affEloCalculatorAny(debateTeam opponent, double valued) {
+        public void affEloCalculatorAny (debateTeam opponent,double valued){
         //if the team that the method this is on is aff.
 
         affElo = affElo + scale * (valued - affExpected(opponent));
@@ -462,11 +469,11 @@ public class debateTeam {
 
     }
 
-    public void negEloCalculatorAny(debateTeam opponent, double valued) {
+        public void negEloCalculatorAny (debateTeam opponent,double valued){
         //if the team that the method this is on is neg.
         negElo = negElo + scale * (valued - negExpected(opponent));
     }
-    public void calculateEloAny(debateTeam opponent, double score) {
+        public void calculateEloAny (debateTeam opponent,double score){
         if (opponent.equals(new debateTeam("Zach BA"))) {
             increaseByes();
             opponent.increaseByes();
@@ -474,32 +481,32 @@ public class debateTeam {
             increaseByes();
             opponent.increaseByes();
         } else {
-            if(score > .5){
-                if(score == 1){
+            if (score > .5) {
+                if (score == 1) {
                     affWinsThreeZero++;
-                }else{
+                } else {
                     affWinsTwoOne++;
                 }
-                if(getElo() > opponent.getElo()){
+                if (getElo() > opponent.getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                }else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(getName() + " beats " + opponent.getName() + " " + (RoundingClass.roundTwoDigits(opponent.getElo() - getElo())) + " difference");
                 }
                 increaseWins();
                 affWinsTotal++;
                 affElimWins++;
-            } else if (score < .5){
-                if(score == 0){
+            } else if (score < .5) {
+                if (score == 0) {
                     negWinsThreeZero++;
-                }else{
+                } else {
                     negWinsTwoOne++;
                 }
-                if(opponent.getElo() > getElo()){
+                if (opponent.getElo() > getElo()) {
                     correct++;
                     totalGamesPlayed++;
-                }else{
+                } else {
                     totalGamesPlayed++;
                     System.out.println(opponent.getName() + " beats " + getName() + " " + (RoundingClass.roundTwoDigits(getElo() - opponent.getElo())) + " difference");
                 }
@@ -514,20 +521,21 @@ public class debateTeam {
             eloCalculatorAny(stayOpponent1, score);
             opponent.eloCalculatorAny(staySelf1, 1 - score);
             affEloCalculatorAny(stayOpponent2, score);
-            opponent.negEloCalculatorAny(staySelf2, 1- score);
+            opponent.negEloCalculatorAny(staySelf2, 1 - score);
             increaseGamesPlayed();
             opponent.increaseGamesPlayed();
             increaseElimRounds();
             opponent.increaseElimRounds();
         }
     }
-    public double getPercentage(){
+        public double getPercentage () {
         return ((double) wins / gamesPlayed);
     }
-    public void divide(int x){
+        public void divide ( int x){
         gamesPlayed = gamesPlayed / x;
         byes = byes / x;
         wins = wins / x;
         elimRounds = elimRounds / x;
     }
-}
+    }
+

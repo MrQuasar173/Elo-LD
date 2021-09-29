@@ -88,7 +88,7 @@ public class TournamentQuality {
                 }
                 lineNumber++;
             }
-            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (235).csv"));
+            Scanner sc = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/mytable (232).csv"));
             sc.useDelimiter(",");
             int count = 0;
             int team = 0;
@@ -140,7 +140,7 @@ public class TournamentQuality {
             }
             System.out.println("Average Elo: " + sum / teamList2.size());
             System.out.println("Average Returner Elo: " + sum2 / teamListReturn.size());
-            list.sortGamesPlayed();
+            list.sortElo();
         } catch (Exception e) {
             e.printStackTrace();
         }

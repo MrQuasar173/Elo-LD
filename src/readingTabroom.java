@@ -3,8 +3,9 @@ import java.util.*;
 
 public class readingTabroom {
     public static void main(String[] args) throws Exception {
-
-            for (int k = 200; k <= 240; k++) {
+        ArrayList<debateTeam> opponentTeams = new ArrayList<debateTeam>();
+        ArrayList<debateTeam> RowlandTeams = new ArrayList<debateTeam>();
+            for (int k = 200; k <= 246; k++) {
                 if (k == 161) {
                     continue;
                 }
@@ -32,6 +33,8 @@ public class readingTabroom {
                     BufferedReader bufreader9 = new BufferedReader(freader9);
                     FileReader freader10 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
                     BufferedReader bufreader10 = new BufferedReader(freader10);
+                FileReader freader12 = new FileReader("/Users/zacharyklein/eloDebateRankings/TeamsPlayed.txt");
+                BufferedReader bufreader12 = new BufferedReader(freader12);
                     Scanner sc2 = new Scanner(new File("/Users/zacharyklein/eloDebateRankings/allMatches.txt"));
                     sc2.useDelimiter(",");   //sets the delimiter pattern
             /*
@@ -45,6 +48,7 @@ public class readingTabroom {
                     ArrayList<Integer> teamStatsByes = new ArrayList<Integer>();
                     ArrayList<Integer> teamStatsElimRounds = new ArrayList<Integer>();
                     ArrayList<Integer> teamStatsWins = new ArrayList<Integer>();
+
                     String nextLine;
 
                     while ((nextLine = bufreader3.readLine()) != null) {
@@ -182,6 +186,14 @@ public class readingTabroom {
                         } else if (count % 6 == 0) {
                             // matches.add(new debateRound(teamList.get(affTeam), teamList.get(negTeam), affWins, tournament) );
                             teamList.get(affTeam).calculateElo(teamList.get(negTeam), true, affWins);
+                            if(teamList.get(affTeam).getSchool().equals("Rowland Hall")){
+                                opponentTeams.add(teamList.get(negTeam));
+                                RowlandTeams.add(teamList.get(affTeam));
+                            }
+                            if(teamList.get(negTeam).getSchool().equals("Rowland Hall")){
+                                opponentTeams.add(teamList.get(affTeam));
+                                RowlandTeams.add(teamList.get(negTeam));
+                            }
                             //teamList.get(negTeam).calculateElo(teamList.get(affTeam), false, affWins);
 
                         }
@@ -219,6 +231,9 @@ public class readingTabroom {
                     BufferedWriter bufwriter9 = new BufferedWriter(frwiter9);
                     FileWriter frwiter10 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsWins.txt");
                     BufferedWriter bufwriter10 = new BufferedWriter(frwiter10);
+                FileWriter frwiter12 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TeamsPlayed.txt");
+                BufferedWriter bufwriter12 = new BufferedWriter(frwiter12);
+
                     for (debateTeam teams : teamList) {
                         // System.out.println(teams.getName() + " " + teams.getLong());
                         bufwriter3.append(teams.getElo() + "\n");
@@ -247,6 +262,16 @@ public class readingTabroom {
                         // System.out.println(teams.getName() + " " + teams.getLong());
                         bufwriter10.append(teams.getWins() + "\n");
                     }
+                    ArrayList<String> rohoMatches = new ArrayList<String>();
+                    for(int a = 0; a < opponentTeams.size(); a++){
+
+                            rohoMatches.add(opponentTeams.get(a).getName() + " vs " + RowlandTeams.get(a).getName());
+
+                    }
+                Collections.sort(rohoMatches, new AlphabeticalOrderComparator());
+                    for(String games : rohoMatches){
+                        bufwriter12.append(games + "\n");
+                    }
                     bufwriter3.flush();
                     bufwriter4.flush();
                     bufwriter5.flush();
@@ -254,6 +279,7 @@ public class readingTabroom {
                     bufwriter8.flush();
                     bufwriter9.flush();
                     bufwriter10.flush();
+                    bufwriter12.flush();
 
                 }
 
@@ -397,6 +423,15 @@ public class readingTabroom {
         ManualAddRound.manualAdd(70,90,(double) 0);
         ManualAddRound.manualAdd(257,90,(double) 2/3);
         ManualAddRound.manualAdd(92,101,(double) 2/3);
+        ManualAddRound.manualAdd(343,345,(double) 0);
+        ManualAddRound.manualAdd(357,350,(double) 1);
+        ManualAddRound.manualAdd(339,353,(double) 1/3);
+        ManualAddRound.manualAdd(335,364,(double) 1/3);
+        ManualAddRound.manualAdd(361,364,(double) 2/3);
+        ManualAddRound.manualAdd(340,353,(double) 1);
+        ManualAddRound.manualAdd(357,356,(double) 0);
+        ManualAddRound.manualAdd(344,361,(double) 0);
+        ManualAddRound.manualAdd(340,356,(double) 0);
 
         FileWriter frwiter11 = new FileWriter("/Users/zacharyklein/eloDebateRankings/TotalAffNegWins.txt");
         BufferedWriter bufwriter11 = new BufferedWriter(frwiter11);

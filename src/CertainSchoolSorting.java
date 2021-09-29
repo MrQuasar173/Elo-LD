@@ -6,7 +6,9 @@ public class CertainSchoolSorting {
         try {
             ArrayList<String> schools = new ArrayList<String>();
             schools.add("Rowland Hall");
-            schools.add("West HS SLC");
+            schools.add("James Logan");
+            schools.add("Peninsula");
+            schools.add("Meadows");
 
 
 

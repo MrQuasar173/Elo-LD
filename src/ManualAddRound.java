@@ -7,6 +7,7 @@ public class ManualAddRound{
 
 
 public static void manualAdd(int affTeam, int negTeam, double score) throws Exception{
+
     ArrayList<debateTeam> teamList = new ArrayList<debateTeam>();
     ArrayList<debateTeam> teamList2 = new ArrayList<debateTeam>();
     ArrayList<debateTeam> teamListReturn = new ArrayList<debateTeam>();
