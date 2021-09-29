@@ -86,11 +86,11 @@ public class PredictMatch {
                 }
                 lineNumber++;
             }
-            System.out.println(teamList.get(8).expected(teamList.get(53)));
-            System.out.println(teamList.get(8).affExpected(teamList.get(53)));
-            System.out.println(teamList.get(8).negExpected(teamList.get(53)));
-            System.out.println(teamList.get(8));
-            System.out.println(teamList.get(53));
+            System.out.println(teamList.get(248).expected(teamList.get(21)));
+            System.out.println(teamList.get(248).affExpected(teamList.get(21)));
+            System.out.println(teamList.get(248).negExpected(teamList.get(21)));
+            System.out.println(teamList.get(248));
+            System.out.println(teamList.get(21));
 
         } catch (Exception e) {
             e.printStackTrace();

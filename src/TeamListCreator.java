@@ -3,7 +3,7 @@ import java.util.*;
 
 public class TeamListCreator {
     public static void main(String[] args) throws Exception {
-        for (int k = 200; k <= 246; k++) {
+        for (int k = 200; k <= 258; k++) {
             if (k == 161) {
                 continue;
             }

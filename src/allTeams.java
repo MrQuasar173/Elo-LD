@@ -13,6 +13,7 @@ public class allTeams {
     private ArrayList<debateTeam> warning = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> teamsForSum = new ArrayList<debateTeam>();
     private ArrayList<debateTeam> probs = new ArrayList<debateTeam>();
+    private ArrayList<debateTeam> teamsEloSortTenPlus = new ArrayList<debateTeam>();
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
     public static final String ANSI_RED = "\u001B[31m";
@@ -112,6 +113,7 @@ public class allTeams {
                 warning.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 teamsForSum.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
                 probs.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
+                teamsEloSortTenPlus.add(new debateTeam(names.get(i), elos.get(i), affElos.get(i), negElos.get(i), gamesPlayed.get(i), byes.get(i), elimRounds.get(i), wins.get(i)));
 
             }
         } catch (Exception e) {
@@ -129,6 +131,7 @@ public class allTeams {
         teamsWins.remove(x);
         warning.remove(x);
         probs.remove(x);
+        teamsEloSortTenPlus.remove(x);
     }
 
     public void sortElo() {
@@ -139,6 +142,23 @@ public class allTeams {
                 System.out.println(k + ". " + teamsEloSort.get(i).toString());
             }else{
                 System.out.println(ANSI_PURPLE + k + ". " + teamsEloSort.get(i).toString() + ANSI_RESET);
+            }
+        }
+    }
+    public void sortEloTenPlus() {
+        for(int i = teamsEloSortTenPlus.size() - 1; i >= 0; i--){
+            if(teamsEloSortTenPlus.get(i).getGamesPlayed() < 10){
+                teamsEloSortTenPlus.remove(i);
+            }
+        }
+        Collections.sort(teamsEloSortTenPlus, new EloComparator());
+
+        for (int i = teamsEloSortTenPlus.size() - 1; i >= 0; i--) {
+            int k = teamsEloSortTenPlus.size() - i;
+            if(!teamsEloSortTenPlus.get(i).warning()) {
+                System.out.println(k + ". " + teamsEloSortTenPlus.get(i).toString());
+            }else{
+                System.out.println(ANSI_PURPLE + k + ". " + teamsEloSortTenPlus.get(i).toString() + ANSI_RESET);
             }
         }
     }
